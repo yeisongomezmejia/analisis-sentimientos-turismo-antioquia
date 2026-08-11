@@ -1,0 +1,6 @@
+data/raw/
+*.zip
+myenv/
+venv/
+__pycache__/
+.ipynb_checkpoints/

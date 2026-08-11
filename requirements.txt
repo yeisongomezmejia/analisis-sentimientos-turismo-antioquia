@@ -1,0 +1,8 @@
+pandas
+transformers
+torch
+nltk
+scikit-learn
+plotly
+matplotlib
+wordcloud
