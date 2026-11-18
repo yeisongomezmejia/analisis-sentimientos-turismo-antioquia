@@ -34,8 +34,6 @@ negativas.
 > repositorio incluye únicamente una muestra anonimizada; el conjunto completo
 > no se redistribuye.
 
- "Se eliminaron identificadores de autor y enlaces a contenido de terceros; se conservó el texto de las reseñas, los metadatos del establecimiento y las etiquetas de sentimiento generadas."
-
 ## Método
 
 **1. Clasificación de sentimiento**
@@ -146,10 +144,13 @@ Matplotlib · WordCloud
 ## Estructura
 
 ```
-├── aplicacion4.ipynb        # notebook principal
+├── notebooks/
+│   ├── 00_anonimizacion.ipynb   # eliminación de identificadores de autor
+│   └── 01_clasificacion.ipynb   # clasificación BERT, análisis léxico y modelado
 ├── data/
-│   └── muestra_anonimizada.csv
-├── imagenes/                # gráficos del README
+│   └── muestra/
+│       └── resenas_muestra.csv  # muestra anonimizada (200 filas)
+├── imagenes/                    # gráficos del README
 └── requirements.txt
 ```
 
@@ -159,7 +160,7 @@ Matplotlib · WordCloud
 git clone https://github.com/yeisongomezmejia/analisis-sentimientos-turismo-antioquia.git
 cd analisis-sentimientos-turismo-antioquia
 pip install -r requirements.txt
-jupyter notebook aplicacion4.ipynb
+jupyter notebook notebooks/01_clasificacion.ipynb
 ```
 
 La primera ejecución descarga el modelo de Hugging Face (~600 MB).
